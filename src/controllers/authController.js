@@ -6,7 +6,7 @@ export async function signUp(req, res) {
   const { name, email, password, confirmPassword, cidade, telefone } = req.body;
 
   if (password !== confirmPassword)
-    return res.status(422).send("senhas nao conferem");
+    return res.status(422).send("senhas não conferem");
 
   const passwordHash = bcrypt.hashSync(password, 10);
 
