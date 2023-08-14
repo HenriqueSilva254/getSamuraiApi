@@ -5,5 +5,6 @@ CREATE TABLE servicos (
     imagem TEXT NOT NULL,
     preco VARCHAR(100) NOT NULL,
     userId INTEGER REFERENCES users(id),
+    ativo BOOLEAN DEFAULT true,
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
